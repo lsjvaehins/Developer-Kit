@@ -21,9 +21,9 @@
 ----------
 ## 概要
 
-　　本文将以 **Developerkit + OT01-1** 为例，教大家如何基于MQTT，在Developerkit上使用NB网络接入阿里云物联网平台。（亦可使用Linkkit组件接入智能生活开放平台和LinkDevelop平台，这里暂只以物联网平台为例）
+　　本文将以 **Developerkit + OT01-5** 为例，教大家如何基于MQTT，在Developerkit上使用NB网络接入阿里云物联网平台。（亦可使用Linkkit组件接入智能生活开放平台和LinkDevelop平台，这里暂只以物联网平台为例）
 
-　　**OT01-1**属于OT01系列，是由[上海诺行信息技术有限公司](www.notioni.com)设计开发的一款NB-IOT模块，具有低功耗、广覆盖等特点，在诸多垂直行业应用广泛。
+　　**OT01-5**属于OT01系列，是由[上海诺行信息技术有限公司](www.notioni.com)设计开发的一款NB-IOT模块，具有低功耗、广覆盖等特点，在诸多垂直行业应用广泛。
 
 　　**物联网平台**是阿里云针对物联网领域开发人员推出的一款设备管理平台。首次使用请先注册阿里云账号，并开通物联网平台服务。
 
@@ -32,12 +32,12 @@
 
 ## 准备条件
 1. Developerkit x1
-1. OT01-1 x1
+1. OT01-5 x1
 1. 物联网卡 x1 （这里使用的是移动物联网卡）
 1. 天线 x1
 1. 螺丝及螺丝刀（用于将模组固定在Developerkit上）
 
-![](https://i.imgur.com/fwyBqFj.jpg)
+![](https://i.imgur.com/4N8mTBn.jpg)
 
 ## 云端配置
 
@@ -95,15 +95,15 @@
 　　到这里云端配置已完成，接下来开始设备端的配置。
 
 ## 设备端配置
-　　首先，请将准备好的Developerkit和OT01-1组装起来：
+　　首先，请将准备好的Developerkit和OT01-5组装起来：
 
 1. 将SIM卡插入Developerkit正面的SIM卡槽中
-2. 再将OT01-1通过Developerkit背面的PCIE接口接入，使用螺丝固定，安装好天线
+2. 再将OT01-5通过Developerkit背面的PCIE接口接入，使用螺丝固定，安装好天线
 3. 务必确保Developerkit上J408的3V3处有跳线帽
 
 注：模组内已预先烧录好了所需的软件，与Developerkit组装后，Developerkit烧录对应的固件即可使用。 
 
-![](https://i.imgur.com/QqM1vC7.jpg)
+![](https://i.imgur.com/3Tp8tIM.jpg)
 
 ![](https://i.imgur.com/EjoySEc.jpg)
 
@@ -142,16 +142,18 @@
 
 
 ## 连接阿里云
-　　通过USB ST-LINK口给Developerkit上电，此时建议打开串口调试工具，设置波特率115200，一同观察。等待10s左右，模块注册上网络，可看到串口出现`mqtt connect success!`。
+　　通过USB ST-LINK口给Developerkit上电，此时建议打开串口调试工具，设置波特率115200，一同观察。等待模块注册上网络，可看到串口出现`mqtt connect success!`。
 
-![](https://i.imgur.com/2jajoiZ.png)
+![](https://i.imgur.com/rWd7JpD.png)
 
 　　回到云端，可以看到设备状态变为“在线”，表示设备已经成功连接上阿里云。
 
-![](https://i.imgur.com/foSbMwY.png)
+![](https://i.imgur.com/Zv8F7QA.png)
 
 |  Version |          Comment        |    Author      |   Date     |
 |:--------:|:-----------------------:|:--------------:|:----------:|
 |    1.0   |  Document initialization| Notion-LiSijia | 2018-12-29 |
+|    1.1   | Modify the module information to OT01-5| Notion-LiSijia | 2019-3-22 |
+
 
 
